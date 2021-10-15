@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Map</title>
+    <style> 
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+    
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script>
+      function initMap() {
+            var location = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4, 
+                center: location
+            });
+      }
+      
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFTThcdI4NrXKiTZd2AnSX0YFgRFsOX8c&callback=initMap">
+
+    </script>
+  </body>
+</html>
